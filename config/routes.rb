@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :widgets
-  resources :users, only: [:create]
+  resources :users, only: [:show, :create]
   resources :features, only: [:index, :show, :create, :destroy]
   resources :assignments, only: [:index, :create, :destroy]
 
