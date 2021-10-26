@@ -7,6 +7,11 @@ def index
     render json: features 
 end
 
+def show
+    feature = Feature.find(params[:id])
+    render json: feature
+end
+
 def create
     feature = Feature.create!(feature_params)
     render json: feature, status: :created
