@@ -17,6 +17,16 @@ def create
     render json: feature, status: :created
 end
 
+def update 
+    feature = Feature.find_by(id: params[:id])
+    if feature 
+        feature.update(feature_params)
+        render json: feature
+    else
+        render json: { error: "Feature not found" }, status: :not_found 
+    end
+end
+
 def destroy
     feature = Feature.find(params[:id])
     feature.destroy

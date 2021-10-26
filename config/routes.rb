@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   resources :widgets
-  resources :users, only: [:show, :create]
-  resources :features, only: [:index, :show, :create, :destroy]
+  resources :users, only: [:index, :show, :create]
+  resources :features
   resources :assignments, only: [:index, :create, :destroy]
 
   post '/login', to: 'auth#create'
