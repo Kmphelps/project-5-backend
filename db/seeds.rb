@@ -10,6 +10,7 @@ puts "Deleting old data..."
 User.destroy_all
 Feature.destroy_all
 Assignment.destroy_all
+Message.destroy_all
 
 puts 
 puts "Creating users..."
@@ -31,6 +32,12 @@ puts
 puts "Creating assignments..."
 assignment1 = Assignment.create(user_id: user1.id, feature_id: feature1.id)
 assignment2 = Assignment.create(user_id: user1.id, feature_id: feature2.id)
+
+puts 
+puts "Creating messages..."
+message1 = Message.create(user_id: user1.id, feature_id: feature1.id, message: "Hi! I have a question!")
+message2 = Message.create(user_id: user1.id, feature_id: feature1.id, message: "Hi! I have an answer...")
+
 
 puts
 puts "Done seeding!"

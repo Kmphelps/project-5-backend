@@ -3,4 +3,5 @@ class User < ApplicationRecord
     validates :username, uniqueness: { case_sensitive: false }
     has_many :assignments 
     has_many :features, through: :assignments 
+    has_many :messages
 end

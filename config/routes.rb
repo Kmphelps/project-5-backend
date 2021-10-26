@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :create]
   resources :features
   resources :assignments, only: [:index, :create, :destroy]
+  resources :messages, only: [:index, :create]
 
   post '/login', to: 'auth#create'
   get '/logged_in', to: 'application#logged_in?'

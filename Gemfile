@@ -46,4 +46,4 @@ gem "jwt", "~> 2.3"
 
 gem "faker", "~> 2.19"
 
-gem 'rspec', '~> 3.0'
+
