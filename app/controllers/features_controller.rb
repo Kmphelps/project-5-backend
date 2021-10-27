@@ -28,10 +28,10 @@ def update
 end
 
 def destroy
-    feature = Feature.find(params[:id])
+    feature = Feature.find_by(id: params[:id])
     feature.destroy
-    head :no_content 
-end
+    render json: {} 
+end 
 
 private
 
